@@ -1,0 +1,30 @@
+{
+  "name": "fetch-pool",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "description": "Concurrency-limited fetch pool (Node.js, ESM)",
+  "license": "ISC",
+  "author": "Paulo Bing <paulo.bing@gmail.com> (https://linkedin.com/in/paulobing)",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "demo:1": "node index.js 1 https://api.agify.io/?name=paulo,https://dog.ceo/api/breeds/image/random,https://official-joke-api.appspot.com/jokes/random",
+    "demo:10": "node index.js 10 https://api.agify.io/?name=paulo,https://dog.ceo/api/breeds/image/random,https://official-joke-api.appspot.com/jokes/random",
+    "test": "vitest",
+    "test:unit": "vitest",
+    "test:undici": "RUN_UNDICI=1 vitest"
+  },
+  "keywords": [
+    "concurrency",
+    "fetch"
+  ],
+  "devDependencies": {
+    "vitest": "^4.0.7"
+  },
+  "dependencies": {
+    "undici": "^7.16.0"
+  }
+}
